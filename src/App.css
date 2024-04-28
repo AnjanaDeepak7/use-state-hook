@@ -24,6 +24,14 @@
   color: white;
 }
 
+.heading {
+  background-color: #272727;
+  padding: 0.5rem 1rem;
+  color: silver;
+  opacity: 0.9;
+  font-style: italic;
+}
+
 .App-link {
   color: #61dafb;
 }

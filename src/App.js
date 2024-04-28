@@ -1,12 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const getRandomName = () => {
+    const names = [
+      "Klaus",
+      "Stefan",
+      "Damon",
+      "Elena",
+      "Caroline",
+      "Elijah",
+      "Bonnie",
+    ];
+    const randomNumber = Math.floor(Math.random() * names.length);
+    return names[randomNumber];
+  };
+  const numberIncrement = () => {
+    setCount(count + 1);
+    console.log(count);
+  };
   return (
     <div className="App">
       <header className="App-header">
+        <h1 className="heading">{getRandomName()}</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p onClick={numberIncrement}>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
